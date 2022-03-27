@@ -1,0 +1,49 @@
+<form [formGroup]="analiseClinica" (ngSubmit)="onSubmit()">
+
+    <div>
+        <label for="pacientes">Paciente - Senha: </label>
+        <br><br>
+        <select formControlName="pacientes" style="width: 100%; height: 70px;">
+            <option *ngFor="let paciente of pacientes |async">{{paciente.nome}}</option>
+        </select>
+    </div>
+    <div>
+        <label for="dataAnalise">Data: </label>
+        <input id="dataAnalise" type="date" formControlName="dataAnalise" />
+    </div>
+    <div>
+        <label for="sintomas">Sintomas: </label>
+        <br><br>
+        <select formControlName="sintomas"  style="width: 100%; height: 70px;">
+            <option *ngFor="let sintoma of sintomas |async">{{sintoma.nome}}</option>
+        </select>
+    </div>
+    <div>
+        <label for="habitos">Hábitos: </label>
+        <br><br>
+        <select formControlName="habitos" style="width: 100%; height: 70px;">
+            <option *ngFor="let habito of habitos |async">{{habito.nome}}</option>
+        </select>
+    </div>
+    <div>
+        <label for="exames">Exames: </label>
+        <br><br>
+        <select formControlName="exames" style="width: 100%; height: 70px;">
+            <option *ngFor="let exame of exames |async">{{exame.nome}}</option>
+        </select>
+    </div>
+    <!--<div>
+        <label for="sintomas">Sintomas: </label>
+        <input id="sintomas" type="text" formControlName="sintomas" />
+    </div>
+    <div>
+        <label for="habitos">Hábitos: </label>
+        <input id="habitos" type="text" formControlName="habitos" />
+    </div>
+    <div>
+        <label for="exames">Exames: </label>
+        <input id="exames" type="text" formControlName="exames" />
+    </div>-->
+    <button class="button" type="submit">Adicionando Análise Clínica</button>
+
+</form>

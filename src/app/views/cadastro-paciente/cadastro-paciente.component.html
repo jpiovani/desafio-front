@@ -1,0 +1,42 @@
+<form [formGroup]="paciente" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="nome">Nome: </label>
+        <input id="nome" type="text" maxlength="50" formControlName="nome"/>
+    </div>
+    <div>
+        <label for="cpf">CPF: </label>
+        <input id="cpf" type="number" maxlength="11" formControlName="cpf" />
+    </div>
+    <div>
+        <label for="convenio">Convênio: </label>
+        <input id="convenio" type="text" maxlength="20" formControlName="convenio" />
+    </div>
+    <div>
+        <label for="cep">CEP: </label>
+        <input id="cep" type="text" maxlength="9" formControlName="cep" />
+        <a href="https://buscacepinter.correios.com.br/app/endereco/index.php">Não sabe o CEP?</a>
+    </div>
+    <div>
+        <label for="endereco">Endereço: </label>
+        <input id="endereco" type="text" maxlength="20" formControlName="endereco" />
+    </div>
+    <div>
+        <label for="numero">Número: </label>
+        <input id="numero" type="number" maxlength="7" formControlName="numero" />
+    </div>
+    <div>
+        <label for="bairro">Bairro: </label>
+        <input id="bairro" type="text" maxlength="30" formControlName="bairro" />
+    </div>
+    <div>
+        <label for="ddd">ddd: </label>
+        <input id="ddd" type="number" maxlength="2" formControlName="ddd" />
+    </div>
+    <div>
+        <label for="celular">Celular: </label>
+        <input id="celular" type="number" maxlength="9" formControlName="celular" />
+    </div>
+
+    <button class="button" type="submit">Cadastrar Paciente</button>
+
+</form>

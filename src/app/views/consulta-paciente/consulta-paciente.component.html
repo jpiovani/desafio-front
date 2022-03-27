@@ -1,0 +1,14 @@
+
+
+<form [formGroup]="gerarPDF" (ngSubmit)="onSubmit()">
+
+    <div>
+        <label for="listaPaciente">Paciente - Senha: </label>
+        <br><br>
+        <select formControlName="listaPaciente" style="width: 100%; height: 30px;">
+            <option *ngFor="let paciente of listaPaciente |async">{{paciente.nome}}</option>
+        </select>
+    </div>
+    <button class="button" type="submit">Gerar PDF</button>
+
+</form>
